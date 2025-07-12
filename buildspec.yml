@@ -12,7 +12,7 @@ phases:
       # aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 556074018555.dkr.ecr.ap-south-1.amazonaws.com
   build:
     commands:
-       - docker build -t my-angular-app:latest .
+      - docker build -t my-angular-app:latest .
       # docker build -t angular-docker-repo:${CODEBUILD_BUILD_NUMBER} .
 
   post_build:
