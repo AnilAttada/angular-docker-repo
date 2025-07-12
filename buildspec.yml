@@ -15,15 +15,15 @@ phases:
   build:
     commands:
       # - docker build -t my-angular-app:latest .
-      # docker build -t angular-docker-repo-b8:${CODEBUILD_BUILD_NUMBER} .
+      # docker build -t angular-docker-repo:${CODEBUILD_BUILD_NUMBER} .
 
   post_build:
     commands:
-      # - docker tag my-angular-app:latest ${DOCKERHUB_USER}/angular-docker-repo-b8:latest
-      # - docker push ${DOCKERHUB_USER}/angular-docker-repo-b8:latest
-      # docker tag angular-docker-repo-b8:${CODEBUILD_BUILD_NUMBER} 556074018555.dkr.ecr.ap-south-1.amazonaws.com/angular-docker-repo-b8:${CODEBUILD_BUILD_NUMBER}
-      # docker push 556074018555.dkr.ecr.ap-south-1.amazonaws.com/angular-docker-repo-b8:${CODEBUILD_BUILD_NUMBER}
-      # printf '[{"name":"angulardockerimage","imageUri":"%s"}]' 556074018555.dkr.ecr.ap-south-1.amazonaws.com/angular-docker-repo-b8:${CODEBUILD_BUILD_NUMBER} > containerDefinition.json
+      # - docker tag my-angular-app:latest ${DOCKERHUB_USER}/angular-docker-repo:latest
+      # - docker push ${DOCKERHUB_USER}/angular-docker-repo:latest
+      # docker tag angular-docker-repo:${CODEBUILD_BUILD_NUMBER} 556074018555.dkr.ecr.ap-south-1.amazonaws.com/angular-docker-repo:${CODEBUILD_BUILD_NUMBER}
+      # docker push 556074018555.dkr.ecr.ap-south-1.amazonaws.com/angular-docker-repo:${CODEBUILD_BUILD_NUMBER}
+      # printf '[{"name":"angulardockerimage","imageUri":"%s"}]' 556074018555.dkr.ecr.ap-south-1.amazonaws.com/angular-docker-repo:${CODEBUILD_BUILD_NUMBER} > containerDefinition.json
 
 artifacts:
   files:
