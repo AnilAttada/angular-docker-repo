@@ -23,9 +23,9 @@ phases:
       - docker push 794210788666.dkr.ecr.ap-south-1.amazonaws.com/angular-docker-repo:${CODEBUILD_BUILD_NUMBER}
       # docker tag angular-docker-repo:${CODEBUILD_BUILD_NUMBER} 556074018555.dkr.ecr.ap-south-1.amazonaws.com/angular-docker-repo:${CODEBUILD_BUILD_NUMBER}
       # docker push 556074018555.dkr.ecr.ap-south-1.amazonaws.com/angular-docker-repo:${CODEBUILD_BUILD_NUMBER}
-      # printf '[{"name":"angulardockerimage","imageUri":"%s"}]' 556074018555.dkr.ecr.ap-south-1.amazonaws.com/angular-docker-repo:${CODEBUILD_BUILD_NUMBER} > containerDefinition.json
+      - printf '[{"name":"angulardockerimage","imageUri":"%s"}]' 794210788666.dkr.ecr.ap-south-1.amazonaws.com/angular-docker-repo:${CODEBUILD_BUILD_NUMBER} > containerDefinition.json
 
-#artifacts:
- # files:
-     #containerDefinition.json
+artifacts:
+  files:
+    - containerDefinition.json
     
