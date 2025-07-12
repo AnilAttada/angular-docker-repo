@@ -1,9 +1,9 @@
 version: 0.2
 
 #env:
-  parameter-store:
-    DOCKERHUB_USER: /docker/username
-    DOCKERHUB_TOKEN: /docker/token
+  #parameter-store:
+    #DOCKERHUB_USER: /docker/username
+    #DOCKERHUB_TOKEN: /docker/token
 
 phases:
   pre_build:
